@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy Food</title>
+  </head>
+  <body>
+    <ul>
+      {% for item in yummy_items %}
+      <li>
+        <a href="{%url 'abhishek' item.foodname%}"> {{item.foodname}} </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
