@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from myapp import views
+from myapp import views, ca, abc
 from myapp import calculate
 
 urlpatterns = [
@@ -46,6 +46,20 @@ urlpatterns = [
     path('yummy_list/', views.yummy_list),
     path('yummy_list/<str:single_yummy_item>/', views.yummy_details, name="abhishek"),
     path('testcss/', views.test_css),
+    path('tastyfood/', views.tasty_list),
+    path('htmlform/', views.form),
+    path('htmlformtask/', views.taskForm),
+    path("form1/", views.form1),
+    path('success/', views.success, name="success"),
+    path('htmltemplateform/', views.htmlform),
+    path('formvalidate/', views.validate),
+    path('ca/', ca.items_list),
+    path('cadetails/<str:persondetail>/', ca.item_details, name="profile"),
+    path('abc/', abc.details, name="query"),
+    path('routes/', views.routes_details),
+    path('home/', views.home, name="home"),
+    path('about/', views.about, name="about"),
+    path('contact/', views.contact, name="contact"),
 ]
 
 # handler404 = "myproject.views.handler404"

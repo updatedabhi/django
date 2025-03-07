@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML form validation</title>
+  </head>
+  <body>
+    <form method="POST">
+      {% csrf_token %}
+      <div>
+        <input placeholder="name" type="text" name="name" value="{{name}}" />
+        <span style="color: red">{{name_err}}</span>
+      </div>
+      <div>
+        <input
+          placeholder="email"
+          type="email"
+          name="email"
+          value="{{email}}"
+        />
+        <span style="color: red">{{email_err}}</span>
+      </div>
+      <div>
+        <input
+          placeholder="password"
+          type="text"
+          name="password"
+          value="{{password}}"
+        />
+        <span style="color: red">{{password_err}}</span>
+      </div>
+      <div>
+        <input type="submit" , value="submit" />
+      </div>
+    </form>
+    <p>{{name}}</p>
+    <p>{{email}}</p>
+    <p>{{password}}</p>
+  </body>
+</html>

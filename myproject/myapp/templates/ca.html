@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CA</title>
+  </head>
+  <body>
+    <h1>This is CA prepration</h1>
+    <ul>
+      {% for detail in details %}
+      <li>
+        <a href="{% url 'profile' detail.name %}">{{detail.name}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+
+<!-- <ul>
+      {%for detail in details%}
+      <li>{{detail.name}}</li>
+      <li>{{detail.age}}</li>
+      <li>{{detail.gender}}</li>
+      <hr />
+      {%endfor%}
+    </ul> -->

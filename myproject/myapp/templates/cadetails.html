@@ -3,13 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food Details</title>
+    <title>CA Details</title>
   </head>
   <body>
-    {% for item in yummy_items %} {% if item.foodname == single_yummy_item %}
-    <h1>
-      Name: {{ item.foodname }} | Price: {{ item.price }} | Size: {{ item.size}}
-    </h1>
+    {%for detail in details %} {% if detail.name == persondetail %}
+    <h1>Name: {{detail.name}} | {{detail.gender}} | {{detail.age}}</h1>
     {% endif %} {% endfor %}
   </body>
 </html>
