@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <th>Title</th>
+      <th>Post</th>
+      <th>thumbnail</th>
+      {%for p in posts %}
+      <tr>
+        <td>{{p.title}}</td>
+        <td>{{p.post}}</td>
+        <td>
+          {%if p.thumbnail %}
+          <img src="{{p.thumbnail.url}}" height="100" width="100" />
+          {%endif%}
+        </td>
+      </tr>
+      {%endfor%}
+    </table>
+  </body>
+</html>

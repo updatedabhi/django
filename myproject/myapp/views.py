@@ -255,3 +255,50 @@ def about(request):
 
 def contact(request):
   return render(request, "contact.html")
+
+# from .models import Signup
+# def usersingup(request):
+#   account_created = False
+#   user = Signup.objects.all()
+#   if request.method == "POST":
+#     usernamevalue = request.POST.get("username")
+#     emailvalue = request.POST.get("email")
+#     passwordvalue = request.POST.get("password")
+#     Signup.objects.create(username=usernamevalue, email = emailvalue, password = passwordvalue)
+#     account_created = True
+#   return render(request, 'signup.html', {'account_created': account_created})
+
+# def delete_user(request, id):
+#   user = Signup.objects.get(pk=id)
+#   user.delete()
+#   return redirect('signupform')
+
+# def edit_user(request, id):
+#   user = Signup.objects.get()(pk=id)
+#   if (request.method == "POST"):
+#     user.username = request.POST['username']
+#     user.email = request.POST['email']
+#     user.password = request.POST['password']
+#     user.save()
+#     return redirect('signupform')
+#   return render(request, 'update.html', {'user': user})
+
+# from .forms import Blogpostform
+
+# def blogpostform(request):
+#     blogpost_created = False
+#     if request.method == "POST":
+#         form = Blogpostform(request.POST, request.FILES)
+#         if form.is_valid():
+#             form.save()
+#             blogpost_created = True
+#     else:
+#         form = Blogpostform() 
+
+#     return render(request, "blogpostform.html", {"blogpost_created": blogpost_created, "form": form})
+
+
+# from .models import Blogpost
+# def fetchblogposts(request):
+#   posts = Blogpost.objects.all()
+#   return render(request, 'fetchblogposts.html', {'posts': posts})
